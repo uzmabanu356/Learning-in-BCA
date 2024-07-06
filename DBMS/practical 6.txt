@@ -1,0 +1,197 @@
+SQL> create table item
+  2  (
+  3  Itno number primary key,
+  4  Itname varchar(30) check(itname in ('printer','keyboard','mouse','writer','scanner','mike')),
+  5  class char(2) check (class in ('A','B','C')),
+  6  qtypur number(10),
+  7  rate decimal(6,2),
+  8  tatalcost number(10),
+  9  stock number(10)
+ 10  );
+
+Table created.
+
+SQL> 1Enter value for itno: 1
+Enter value for itname: printer
+Enter value for class: A
+Enter value for qtypur: 101
+Enter value for rate: 3
+Enter value for tatalcost: 900
+Enter value for stock: 4
+old   2: values(&itno,'&itname','&class',&qtypur,&rate,&tatalcost,&stock)
+new   2: values(1,'printer','A',101,3,900,4)
+
+1 row created.
+
+SQL> /
+Enter value for itno: 2
+Enter value for itname: keyboard
+Enter value for class: B
+Enter value for qtypur: 102
+Enter value for rate: 4
+Enter value for tatalcost: 700
+Enter value for stock: 3
+old   2: values(&itno,'&itname','&class',&qtypur,&rate,&tatalcost,&stock)
+new   2: values(2,'keyboard','B',102,4,700,3)
+
+1 row created.
+
+SQL> /
+Enter value for itno: 3
+Enter value for itname: mouse
+Enter value for class: C
+Enter value for qtypur: 103
+Enter value for rate: 7
+Enter value for tatalcost: 800
+Enter value for stock: 2
+old   2: values(&itno,'&itname','&class',&qtypur,&rate,&tatalcost,&stock)
+new   2: values(3,'mouse','C',103,7,800,2)
+
+1 row created.
+
+SQL> /
+Enter value for itno: 4
+Enter value for itname: writer
+Enter value for class: A
+Enter value for qtypur: 104
+Enter value for rate: 3
+Enter value for tatalcost: 600
+Enter value for stock: 4
+old   2: values(&itno,'&itname','&class',&qtypur,&rate,&tatalcost,&stock)
+new   2: values(4,'writer','A',104,3,600,4)
+
+1 row created.
+
+SQL> /
+Enter value for itno: 5
+Enter value for itname: scanner
+Enter value for class: B
+Enter value for qtypur: 105
+Enter value for rate: 7
+Enter value for tatalcost: 900
+Enter value for stock: 2
+old   2: values(&itno,'&itname','&class',&qtypur,&rate,&tatalcost,&stock)
+new   2: values(5,'scanner','B',105,7,900,2)
+
+1 row created.
+
+SQL> /
+Enter value for itno: 6
+Enter value for itname: mike
+Enter value for class: C
+Enter value for qtypur: 106
+Enter value for rate: 3
+Enter value for tatalcost: 700
+Enter value for stock: 3
+old   2: values(&itno,'&itname','&class',&qtypur,&rate,&tatalcost,&stock)
+new   2: values(6,'mike','C',106,3,700,3)
+
+1 row created.
+
+SQL> /
+Enter value for itno: 7
+Enter value for itname: printer
+Enter value for class: A
+Enter value for qtypur: 107
+Enter value for rate: 4
+Enter value for tatalcost: 900
+Enter value for stock: 3
+old   2: values(&itno,'&itname','&class',&qtypur,&rate,&tatalcost,&stock)
+new   2: values(7,'printer','A',107,4,900,3)
+
+1 row created.
+
+SQL> /
+Enter value for itno: 8
+Enter value for itname: mouse
+Enter value for class: C
+Enter value for qtypur: 108
+Enter value for rate: 4
+Enter value for tatalcost: 800
+Enter value for stock: 2
+old   2: values(&itno,'&itname','&class',&qtypur,&rate,&tatalcost,&stock)
+new   2: values(8,'mouse','C',108,4,800,2)
+
+1 row created.
+
+SQL> /
+Enter value for itno: 9
+Enter value for itname: keyboard
+Enter value for class: B
+Enter value for qtypur: 109
+Enter value for rate: 3
+Enter value for tatalcost: 700
+Enter value for stock: 3
+old   2: values(&itno,'&itname','&class',&qtypur,&rate,&tatalcost,&stock)
+new   2: values(9,'keyboard','B',109,3,700,3)
+
+1 row created.
+
+SQL> /
+Enter value for itno: 10
+Enter value for itname: mike
+Enter value for class: A
+Enter value for qtypur: 110
+Enter value for rate: 4
+Enter value for tatalcost: 500
+Enter value for stock: 2
+old   2: values(&itno,'&itname','&class',&qtypur,&rate,&tatalcost,&stock)
+new   2: values(10,'mike','A',110,4,500,2)
+
+1 row created.
+
+SQL> select * from item;
+
+      ITNO ITNAME                         CL     QTYPUR       RATE  TATALCOST
+---------- ------------------------------ -- ---------- ---------- ----------
+     STOCK
+----------
+         1 printer                        A         101          3        900
+         4
+
+         2 keyboard                       B         102          4        700
+         3
+
+         3 mouse                          C         103          7        800
+         2
+
+
+      ITNO ITNAME                         CL     QTYPUR       RATE  TATALCOST
+---------- ------------------------------ -- ---------- ---------- ----------
+     STOCK
+----------
+         4 writer                         A         104          3        600
+         4
+
+         5 scanner                        B         105          7        900
+         2
+
+         6 mike                           C         106          3        700
+         3
+
+
+      ITNO ITNAME                         CL     QTYPUR       RATE  TATALCOST
+---------- ------------------------------ -- ---------- ---------- ----------
+     STOCK
+----------
+         7 printer                        A         107          4        900
+         3
+
+         8 mouse                          C         108          4        800
+         2
+
+         9 keyboard                       B         109          3        700
+         3
+
+
+      ITNO ITNAME                         CL     QTYPUR       RATE  TATALCOST
+---------- ------------------------------ -- ---------- ---------- ----------
+     STOCK
+----------
+        10 mike                           A         110          4        500
+         2
+
+
+10 rows selected.
+
+SQL>

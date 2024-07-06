@@ -1,0 +1,37 @@
+SQL> create table item
+  2  (
+  3  Itno Number(4) primary key,
+  4  Name varchar(20) unique,
+  5  QOH number(5) check (QOH>20),
+  6  class char(1) check(class in ('A','B','C')),
+  7  UOM char(4),
+  8  ROL number(5) check (ROL>20),
+  9  Rate number(8)
+ 10  );
+
+Table created.
+
+
+SQL> insert all
+  2  into item values(1,'pen',30,'A','pcs',25,10)
+  3  into item values(2,'eraser',25,'B','pcs',28,3)
+  4  into item values(3,'scale',21,'C','pcs',23,5)
+  5  into item values(4,'pencile',40,'A','pcs',22,5)
+  6  into item values(5,'sharpener',26,'B','pcs',30,4)
+  7  into item values(6,'marker',35,'C','pcs',27,20)
+  8  select * from dual;
+
+6 rows created.
+
+SQL> select * from item;
+
+      ITNO NAME                        QOH C UOM         ROL       RATE
+---------- -------------------- ---------- - ---- ---------- ----------
+         1 pen                          30 A pcs          25         10
+         2 eraser                       25 B pcs          28          3
+         3 scale                        21 C pcs          23          5
+         4 pencile                      40 A pcs          22          5
+         5 sharpener                    26 B pcs          30          4
+         6 marker                       35 C pcs          27         20
+
+6 rows selected.

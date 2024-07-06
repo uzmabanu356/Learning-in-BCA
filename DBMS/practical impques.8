@@ -1,0 +1,910 @@
+SQL> create table student1
+  2  (
+  3  id number(10),
+  4  name varchar(20) unique,
+  5  age number(10)check(age > 20),
+  6  course_id number(10) primary key,
+  7  DOB date,
+  8  city varchar(20) check(city in('ajmer','bhilwara','chittorgarh','udaipur')),
+  9  marks number(10)
+ 10  );
+
+Table created.
+
+SQL> create table course
+  2  (
+  3  course_id number(10) references student1(courseid),
+  4  co_name varchar(20),
+  5  majorsub varchar(20) unique
+  6  );
+
+Table created.
+
+SQL> desc student1;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                                 NUMBER(10)
+ NAME                                               VARCHAR2(20)
+ AGE                                                NUMBER(10)
+ COURSEID                                  NOT NULL NUMBER(10)
+ DOB                                                DATE
+ CITY                                               VARCHAR2(20)
+ MARKS                                              NUMBER(10)
+
+SQL> insert into student1 values(&1,'&2',&3,&4,&5,'&6',&7);
+Enter value for 1: 1
+Enter value for 2: uzma
+Enter value for 3: 21
+Enter value for 4: 101
+Enter value for 5: date'2005-08-16'
+Enter value for 6: ajmer
+Enter value for 7: 95
+old   1: insert into student1 values(&1,'&2',&3,&4,&5,'&6',&7)
+new   1: insert into student1 values(1,'uzma',21,101,date'2005-08-16','ajmer',95)
+
+1 row created.
+
+SQL> /
+Enter value for 1: 2
+Enter value for 2: faizan
+Enter value for 3: 23
+Enter value for 4: 102
+Enter value for 5: date'1998-08-15'
+Enter value for 6: chittorgarh
+Enter value for 7: 98
+old   1: insert into student1 values(&1,'&2',&3,&4,&5,'&6',&7)
+new   1: insert into student1 values(2,'faizan',23,102,date'1998-08-15','chittorgarh',98)
+
+1 row created.
+
+SQL> /
+Enter value for 1: 3
+Enter value for 2: shadma
+Enter value for 3: 22
+Enter value for 4: 103
+Enter value for 5: date'2002-03-21'
+Enter value for 6: bhilwara
+Enter value for 7: 87
+old   1: insert into student1 values(&1,'&2',&3,&4,&5,'&6',&7)
+new   1: insert into student1 values(3,'shadma',22,103,date'2002-03-21','bhilwara',87)
+
+1 row created.
+
+SQL> /
+Enter value for 1: 4
+Enter value for 2: nazbi
+Enter value for 3: 21
+Enter value for 4: 104
+Enter value for 5: date'2007-08-14'
+Enter value for 6: udaipur
+Enter value for 7: 85
+old   1: insert into student1 values(&1,'&2',&3,&4,&5,'&6',&7)
+new   1: insert into student1 values(4,'nazbi',21,104,date'2007-08-14','udaipur',85)
+
+1 row created.
+
+SQL> /
+Enter value for 1: 5
+Enter value for 2: iqra
+Enter value for 3: 21
+Enter value for 4: 105
+Enter value for 5: date'2004-09-13'
+Enter value for 6: chittorgarh
+Enter value for 7: 75
+old   1: insert into student1 values(&1,'&2',&3,&4,&5,'&6',&7)
+new   1: insert into student1 values(5,'iqra',21,105,date'2004-09-13','chittorgarh',75)
+
+1 row created.
+
+SQL> /
+Enter value for 1: 6
+Enter value for 2: idraq
+Enter value for 3: 22
+Enter value for 4: 106
+Enter value for 5: date'2001-11-14'
+Enter value for 6: ajmer
+Enter value for 7: 95
+old   1: insert into student1 values(&1,'&2',&3,&4,&5,'&6',&7)
+new   1: insert into student1 values(6,'idraq',22,106,date'2001-11-14','ajmer',95)
+
+1 row created.
+
+SQL> select * from student1;
+
+        ID NAME                        AGE   COURSEID DOB
+---------- -------------------- ---------- ---------- ---------
+CITY                      MARKS
+-------------------- ----------
+         1 uzma                         21        101 16-AUG-05
+ajmer                        95
+
+         2 faizan                       23        102 15-AUG-98
+chittorgarh                  98
+
+         3 shadma                       22        103 21-MAR-02
+bhilwara                     87
+
+
+        ID NAME                        AGE   COURSEID DOB
+---------- -------------------- ---------- ---------- ---------
+CITY                      MARKS
+-------------------- ----------
+         4 nazbi                        21        104 14-AUG-07
+udaipur                      85
+
+         5 iqra                         21        105 13-SEP-04
+chittorgarh                  75
+
+         6 idraq                        22        106 14-NOV-01
+ajmer                        95
+
+
+6 rows selected.
+
+SQL> select * from student1;
+
+        ID NAME                        AGE   COURSEID DOB
+---------- -------------------- ---------- ---------- ---------
+CITY                      MARKS
+-------------------- ----------
+         1 uzma                         21        101 16-AUG-05
+ajmer                        95
+
+         2 faizan                       23        102 15-AUG-98
+chittorgarh                  98
+
+         3 shadma                       22        103 21-MAR-02
+bhilwara                     87
+
+
+        ID NAME                        AGE   COURSEID DOB
+---------- -------------------- ---------- ---------- ---------
+CITY                      MARKS
+-------------------- ----------
+         4 nazbi                        21        104 14-AUG-07
+udaipur                      85
+
+         5 iqra                         21        105 13-SEP-04
+chittorgarh                  75
+
+         6 idraq                        22        106 14-NOV-01
+ajmer                        95
+
+
+6 rows selected.
+
+SQL> commit
+  2
+SQL> commit;
+
+Commit complete.
+
+SQL> insert into course values(&1,'&2','&3');
+Enter value for 1: 101
+Enter value for 2: computer science
+Enter value for 3: software engineering
+old   1: insert into course values(&1,'&2','&3')
+new   1: insert into course values(101,'computer science','software engineering')
+
+1 row created.
+
+SQL> /
+Enter value for 1: 102
+Enter value for 2: mathematics
+Enter value for 3: statistics
+old   1: insert into course values(&1,'&2','&3')
+new   1: insert into course values(102,'mathematics','statistics')
+
+1 row created.
+
+SQL> /
+Enter value for 1: 103
+Enter value for 2: english literature
+Enter value for 3: shakespearean studies
+old   1: insert into course values(&1,'&2','&3')
+new   1: insert into course values(103,'english literature','shakespearean studies')
+insert into course values(103,'english literature','shakespearean studies')
+                                                   *
+ERROR at line 1:
+ORA-12899: value too large for column "UROOJ"."COURSE"."MAJORSUB" (actual: 21,
+maximum: 20)
+
+
+SQL> /
+Enter value for 1: 103
+Enter value for 2: english literature
+Enter value for 3: shakespear studies
+old   1: insert into course values(&1,'&2','&3')
+new   1: insert into course values(103,'english literature','shakespear studies')
+
+1 row created.
+
+SQL> /
+Enter value for 1: 104
+Enter value for 2: biology
+Enter value for 3: molecular biology
+old   1: insert into course values(&1,'&2','&3')
+new   1: insert into course values(104,'biology','molecular biology')
+
+1 row created.
+
+SQL> /
+Enter value for 1: 105
+Enter value for 2: business
+Enter value for 3: business law
+old   1: insert into course values(&1,'&2','&3')
+new   1: insert into course values(105,'business','business law')
+
+1 row created.
+
+SQL> /
+Enter value for 1: 106
+Enter value for 2: world history
+Enter value for 3: the civil war era
+old   1: insert into course values(&1,'&2','&3')
+new   1: insert into course values(106,'world history','the civil war era')
+
+1 row created.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> select * from course
+  2  ;
+
+ COURSE_ID CO_NAME              MAJORSUB
+---------- -------------------- --------------------
+       101 computer science     software engineering
+       102 mathematics          statistics
+       103 english literature   shakespear studies
+       104 biology              molecular biology
+       105 business             business law
+       106 world history        the civil war era
+
+6 rows selected.
+
+SQL> select name from student1 where name like 'j%';
+
+no rows selected
+
+SQL> select name from student1 where name like 'u%';
+
+NAME
+--------------------
+uzma
+
+SQL> select name from student1 where name like 'j%';
+
+no rows selected
+
+SQL> alter table student1 rename courseid to course_id;
+alter table student1 rename courseid to course_id
+                            *
+ERROR at line 1:
+ORA-14155: missing PARTITION or SUBPARTITION keyword
+
+
+SQL> alter table student1 rename  column courseid to course_id;
+
+Table altered.
+
+SQL> select * from student1;
+
+        ID NAME                        AGE  COURSE_ID DOB
+---------- -------------------- ---------- ---------- ---------
+CITY                      MARKS
+-------------------- ----------
+         1 uzma                         21        101 16-AUG-05
+ajmer                        95
+
+         2 faizan                       23        102 15-AUG-98
+chittorgarh                  98
+
+         3 shadma                       22        103 21-MAR-02
+bhilwara                     87
+
+
+        ID NAME                        AGE  COURSE_ID DOB
+---------- -------------------- ---------- ---------- ---------
+CITY                      MARKS
+-------------------- ----------
+         4 nazbi                        21        104 14-AUG-07
+udaipur                      85
+
+         5 iqra                         21        105 13-SEP-04
+chittorgarh                  75
+
+         6 idraq                        22        106 14-NOV-01
+ajmer                        95
+
+
+6 rows selected.
+
+SQL> select name from student1 where name like 'j%';
+
+no rows selected
+
+SQL> select name,co_name from student1,course where student1.course_id=course.course_id;
+
+NAME                 CO_NAME
+-------------------- --------------------
+uzma                 computer science
+faizan               mathematics
+shadma               english literature
+nazbi                biology
+iqra                 business
+idraq                world history
+
+6 rows selected.
+
+SQL>  select name,age from student1 where city='udaiour';
+
+no rows selected
+
+SQL>  select name,age from student1 where city='udaipur';
+
+NAME                        AGE
+-------------------- ----------
+nazbi                        21
+
+
+SQL> create view stu_summary as select id , name , marks from student1;
+
+View created.
+
+SQL>  select name,age from student1 where city='udaipur';
+
+NAME                        AGE
+-------------------- ----------
+nazbi                        21
+
+SQL> select *from stu_summary;
+
+        ID NAME                      MARKS
+---------- -------------------- ----------
+         1 uzma                         95
+         2 faizan                       98
+         3 shadma                       87
+         4 nazbi                        85
+         5 iqra                         75
+         6 idraq                        95
+
+6 rows selected.
+
+SQL>  select name,age from student1 where city='udaipur';
+
+NAME                        AGE
+-------------------- ----------
+nazbi                        21
+
+SQL> create view student_summary as select id , name , marks from student1;
+
+View created.
+
+SQL> select *from student_summary;
+
+        ID NAME                      MARKS
+---------- -------------------- ----------
+         1 uzma                         95
+         2 faizan                       98
+         3 shadma                       87
+         4 nazbi                        85
+         5 iqra                         75
+         6 idraq                        95
+
+6 rows selected.
+
+SQL> commit;
+
+Commit complete.
+
+SQL>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SQL> create table student1
+  2  (
+  3  id number(10),
+  4  name varchar(20) unique,
+  5  age number(10)check(age > 20),
+  6  courseid number(10) primary key,
+  7  DOB date,
+  8  city varchar(20) check(city in('ajmer','bhilwara','chittorgarh','udaipur')),
+  9  marks number(10)
+ 10  );
+
+Table created.
+
+SQL> create table course
+  2  (
+  3  course_id number(10) references student(courseid),
+  4  co_name varchar(20),
+  5  majorsub varchar(20) unique
+  6  );
+course_id number(10) references student(courseid),
+                                        *
+ERROR at line 3:
+ORA-00904: "COURSEID": invalid identifier
+
+
+SQL> create table course
+  2  (
+  3  course_id number(10) references student1(courseid),
+  4
+SQL>
+SQL> );
+SP2-0042: unknown command ")" - rest of line ignored.
+SQL> create table course
+  2  (
+  3  course_id number(10) references student1(courseid),
+  4  co_name varchar(20),
+  5  majorsub varchar(20) unique
+  6  );
+
+Table created.
+
+SQL> desc student1;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                                 NUMBER(10)
+ NAME                                               VARCHAR2(20)
+ AGE                                                NUMBER(10)
+ COURSEID                                  NOT NULL NUMBER(10)
+ DOB                                                DATE
+ CITY                                               VARCHAR2(20)
+ MARKS                                              NUMBER(10)
+
+                                                    
+SQL> insert into student1 values(&1,'&2',&3,&4,&5,'&6',&7);
+Enter value for 1: 1
+Enter value for 2: uzma
+Enter value for 3: 18
+Enter value for 4: 101
+Enter value for 5: date'2005-08-16'
+Enter value for 6: chittor
+Enter value for 7: 95
+old   1: insert into student1 values(&1,'&2',&3,&4,&5,'&6',&7)
+new   1: insert into student1 values(1,'uzma',18,101,date'2005-08-16','chittor',95)
+insert into student1 values(1,'uzma',18,101,date'2005-08-16','chittor',95)
+*
+ERROR at line 1:
+ORA-02290: check constraint (UROOJ.SYS_C004386) violated
+
+
+SQL> insert into student1 values(&1,'&2',&3,&4,&5,'&6',&7);
+Enter value for 1: 1
+Enter value for 2: uzma
+Enter value for 3: 21
+Enter value for 4: 101
+Enter value for 5: date'2005-08-16'
+Enter value for 6: ajmer
+Enter value for 7: 95
+old   1: insert into student1 values(&1,'&2',&3,&4,&5,'&6',&7)
+new   1: insert into student1 values(1,'uzma',21,101,date'2005-08-16','ajmer',95)
+
+1 row created.
+
+SQL> /
+Enter value for 1: 2
+Enter value for 2: faizan
+Enter value for 3: 23
+Enter value for 4: 102
+Enter value for 5: date'1998-08-15'
+Enter value for 6: chittorgarh
+Enter value for 7: 98
+old   1: insert into student1 values(&1,'&2',&3,&4,&5,'&6',&7)
+new   1: insert into student1 values(2,'faizan',23,102,date'1998-08-15','chittorgarh',98)
+
+1 row created.
+
+SQL> /
+Enter value for 1: 3
+Enter value for 2: shadma
+Enter value for 3: 22
+Enter value for 4: 103
+Enter value for 5: date'2002-03-21'
+Enter value for 6: bhilwara
+Enter value for 7: 87
+old   1: insert into student1 values(&1,'&2',&3,&4,&5,'&6',&7)
+new   1: insert into student1 values(3,'shadma',22,103,date'2002-03-21','bhilwara',87)
+
+1 row created.
+
+SQL> /
+Enter value for 1: 4
+Enter value for 2: nazbi
+Enter value for 3: 21
+Enter value for 4: 104
+Enter value for 5: date'2007-08-14'
+Enter value for 6: udaipur
+Enter value for 7: 85
+old   1: insert into student1 values(&1,'&2',&3,&4,&5,'&6',&7)
+new   1: insert into student1 values(4,'nazbi',21,104,date'2007-08-14','udaipur',85)
+
+1 row created.
+
+SQL> /
+Enter value for 1: 5
+Enter value for 2: iqra
+Enter value for 3: 21
+Enter value for 4: 105
+Enter value for 5: date'2004-09-13'
+Enter value for 6: chittorgarh
+Enter value for 7: 75
+old   1: insert into student1 values(&1,'&2',&3,&4,&5,'&6',&7)
+new   1: insert into student1 values(5,'iqra',21,105,date'2004-09-13','chittorgarh',75)
+
+1 row created.
+
+SQL> /
+Enter value for 1: 6
+Enter value for 2: idraq
+Enter value for 3: 22
+Enter value for 4: 106
+Enter value for 5: date'2001-11-14'
+Enter value for 6: ajmer
+Enter value for 7: 95
+old   1: insert into student1 values(&1,'&2',&3,&4,&5,'&6',&7)
+new   1: insert into student1 values(6,'idraq',22,106,date'2001-11-14','ajmer',95)
+
+1 row created.
+
+SQL> select * from student1;
+
+        ID NAME                        AGE   COURSEID DOB
+---------- -------------------- ---------- ---------- ---------
+CITY                      MARKS
+-------------------- ----------
+         1 uzma                         21        101 16-AUG-05
+ajmer                        95
+
+         2 faizan                       23        102 15-AUG-98
+chittorgarh                  98
+
+         3 shadma                       22        103 21-MAR-02
+bhilwara                     87
+
+
+        ID NAME                        AGE   COURSEID DOB
+---------- -------------------- ---------- ---------- ---------
+CITY                      MARKS
+-------------------- ----------
+         4 nazbi                        21        104 14-AUG-07
+udaipur                      85
+
+         5 iqra                         21        105 13-SEP-04
+chittorgarh                  75
+
+         6 idraq                        22        106 14-NOV-01
+ajmer                        95
+
+
+6 rows selected.
+
+SQL> select * from student1;
+
+        ID NAME                        AGE   COURSEID DOB
+---------- -------------------- ---------- ---------- ---------
+CITY                      MARKS
+-------------------- ----------
+         1 uzma                         21        101 16-AUG-05
+ajmer                        95
+
+         2 faizan                       23        102 15-AUG-98
+chittorgarh                  98
+
+         3 shadma                       22        103 21-MAR-02
+bhilwara                     87
+
+
+        ID NAME                        AGE   COURSEID DOB
+---------- -------------------- ---------- ---------- ---------
+CITY                      MARKS
+-------------------- ----------
+         4 nazbi                        21        104 14-AUG-07
+udaipur                      85
+
+         5 iqra                         21        105 13-SEP-04
+chittorgarh                  75
+
+         6 idraq                        22        106 14-NOV-01
+ajmer                        95
+
+
+6 rows selected.
+
+SQL> commit
+  2
+SQL> commit;
+
+Commit complete.
+
+SQL> insert into course values(&1,'&2','&3');
+Enter value for 1: 101
+Enter value for 2: computer science
+Enter value for 3: software engineering
+old   1: insert into course values(&1,'&2','&3')
+new   1: insert into course values(101,'computer science','software engineering')
+
+1 row created.
+
+SQL> /
+Enter value for 1: 102
+Enter value for 2: mathematics
+Enter value for 3: statistics
+old   1: insert into course values(&1,'&2','&3')
+new   1: insert into course values(102,'mathematics','statistics')
+
+1 row created.
+
+SQL> /
+Enter value for 1: 103
+Enter value for 2: english literature
+Enter value for 3: shakespearean studies
+old   1: insert into course values(&1,'&2','&3')
+new   1: insert into course values(103,'english literature','shakespearean studies')
+insert into course values(103,'english literature','shakespearean studies')
+                                                   *
+ERROR at line 1:
+ORA-12899: value too large for column "UROOJ"."COURSE"."MAJORSUB" (actual: 21,
+maximum: 20)
+
+
+SQL> /
+Enter value for 1: 103
+Enter value for 2: english literature
+Enter value for 3: shakespear studies
+old   1: insert into course values(&1,'&2','&3')
+new   1: insert into course values(103,'english literature','shakespear studies')
+
+1 row created.
+
+SQL> /
+Enter value for 1: 104
+Enter value for 2: biology
+Enter value for 3: molecular biology
+old   1: insert into course values(&1,'&2','&3')
+new   1: insert into course values(104,'biology','molecular biology')
+
+1 row created.
+
+SQL> /
+Enter value for 1: 105
+Enter value for 2: business
+Enter value for 3: business law
+old   1: insert into course values(&1,'&2','&3')
+new   1: insert into course values(105,'business','business law')
+
+1 row created.
+
+SQL> /
+Enter value for 1: 106
+Enter value for 2: world history
+Enter value for 3: the civil war era
+old   1: insert into course values(&1,'&2','&3')
+new   1: insert into course values(106,'world history','the civil war era')
+
+1 row created.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> select * from course
+  2  ;
+
+ COURSE_ID CO_NAME              MAJORSUB
+---------- -------------------- --------------------
+       101 computer science     software engineering
+       102 mathematics          statistics
+       103 english literature   shakespear studies
+       104 biology              molecular biology
+       105 business             business law
+       106 world history        the civil war era
+
+6 rows selected.
+
+SQL> select name from student1 where name like 'j%';
+
+no rows selected
+
+SQL> select name from student1 where name like 'u%';
+
+NAME
+--------------------
+uzma
+
+SQL> select name from student1 where name like 'j%';
+
+no rows selected
+                            
+SQL> select * from student1;
+
+        ID NAME                        AGE  COURSE_ID DOB
+---------- -------------------- ---------- ---------- ---------
+CITY                      MARKS
+-------------------- ----------
+         1 uzma                         21        101 16-AUG-05
+ajmer                        95
+
+         2 faizan                       23        102 15-AUG-98
+chittorgarh                  98
+
+         3 shadma                       22        103 21-MAR-02
+bhilwara                     87
+
+
+        ID NAME                        AGE  COURSE_ID DOB
+---------- -------------------- ---------- ---------- ---------
+CITY                      MARKS
+-------------------- ----------
+         4 nazbi                        21        104 14-AUG-07
+udaipur                      85
+
+         5 iqra                         21        105 13-SEP-04
+chittorgarh                  75
+
+         6 idraq                        22        106 14-NOV-01
+ajmer                        95
+
+
+6 rows selected.
+
+SQL> select name from student1 where name like 'j%';
+
+no rows selected
+
+SQL> select name,co_name from student1,course where student1.course_id=course.course_id;
+
+NAME                 CO_NAME
+-------------------- --------------------
+uzma                 computer science
+faizan               mathematics
+shadma               english literature
+nazbi                biology
+iqra                 business
+idraq                world history
+
+6 rows selected.
+                           
+
+SQL>  select name,age from student1 where city='udaipur';
+
+NAME                        AGE
+-------------------- ----------
+nazbi                        21
+
+SQL> create view student_summary as select id , name , marks from student1;
+
+View created.
+
+SQL> select *from student_summary;
+
+        ID NAME                      MARKS
+---------- -------------------- ----------
+         1 uzma                         95
+         2 faizan                       98
+         3 shadma                       87
+         4 nazbi                        85
+         5 iqra                         75
+         6 idraq                        95
+
+6 rows selected.
+
+SQL> commit;
+
+Commit complete.
+
+SQL>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

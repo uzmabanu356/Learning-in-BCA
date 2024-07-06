@@ -1,0 +1,387 @@
+
+insert into hotel values(&1,'&2','&3');
+Enter value for 1: 1
+Enter value for 2: meera
+Enter value for 3: mumbai
+old   1: insert into hotel values(&1,'&2','&3')
+new   1: insert into hotel values(1,'meera','mumbai')
+
+1 row created.
+
+SQL> /
+Enter value for 1: 2
+Enter value for 2: padmavat
+Enter value for 3: chittorgarh
+old   1: insert into hotel values(&1,'&2','&3')
+new   1: insert into hotel values(2,'padmavat','chittorgarh')
+
+1 row created.
+
+SQL> /
+Enter value for 1: 3
+Enter value for 2: green_plaza
+Enter value for 3: mumbai
+old   1: insert into hotel values(&1,'&2','&3')
+new   1: insert into hotel values(3,'green_plaza','mumbai')
+
+1 row created.
+
+SQL> /
+Enter value for 1: 4
+Enter value for 2: vinayak
+Enter value for 3: chittorgarh
+old   1: insert into hotel values(&1,'&2','&3')
+new   1: insert into hotel values(4,'vinayak','chittorgarh')
+
+1 row created.
+
+SQL> /
+Enter value for 1: 5
+Enter value for 2: seven_eleven
+Enter value for 3: udaipur
+old   1: insert into hotel values(&1,'&2','&3')
+new   1: insert into hotel values(5,'seven_eleven','udaipur')
+
+1 row created.
+
+SQL> /
+Enter value for 1: 6
+Enter value for 2: chokhi_dhani
+Enter value for 3: jaipur
+old   1: insert into hotel values(&1,'&2','&3')
+new   1: insert into hotel values(6,'chokhi_dhani','jaipur')
+
+1 row created.
+
+SQL> /
+Enter value for 1: 7
+Enter value for 2: taj_hotel
+Enter value for 3: mumbai
+old   1: insert into hotel values(&1,'&2','&3')
+new   1: insert into hotel values(7,'taj_hotel','mumbai')
+
+1 row created.
+
+SQL> insert into room values(&1,&2,'&3',&4);
+Enter value for 1: 1
+Enter value for 2: 2
+Enter value for 3: single
+Enter value for 4: 500
+old   1: insert into room values(&1,&2,'&3',&4)
+new   1: insert into room values(1,2,'single',500)
+
+1 row created.
+
+SQL> /
+Enter value for 1: 102
+Enter value for 2: 3
+Enter value for 3: double
+Enter value for 4: 700
+old   1: insert into room values(&1,&2,'&3',&4)
+new   1: insert into room values(102,3,'double',700)
+
+1 row created.
+
+SQL> /
+Enter value for 1: 103
+Enter value for 2: 4
+Enter value for 3: family
+Enter value for 4: 800
+old   1: insert into room values(&1,&2,'&3',&4)
+new   1: insert into room values(103,4,'family',800)
+
+1 row created.
+
+SQL> /
+Enter value for 1: 104
+Enter value for 2: 5
+Enter value for 3: single
+Enter value for 4: 600
+old   1: insert into room values(&1,&2,'&3',&4)
+new   1: insert into room values(104,5,'single',600)
+
+1 row created.
+
+SQL> /
+Enter value for 1: 105
+Enter value for 2: 3
+Enter value for 3: double
+Enter value for 4: 850
+old   1: insert into room values(&1,&2,'&3',&4)
+new   1: insert into room values(105,3,'double',850)
+
+1 row created.
+
+SQL> /
+Enter value for 1: 106
+Enter value for 2: 4
+Enter value for 3: family
+Enter value for 4: 750
+old   1: insert into room values(&1,&2,'&3',&4)
+new   1: insert into room values(106,4,'family',750)
+
+1 row created.
+
+SQL> /
+Enter value for 1: 107
+Enter value for 2: 5
+Enter value for 3: family
+Enter value for 4: 900
+old   1: insert into room values(&1,&2,'&3',&4)
+new   1: insert into room values(107,5,'family',900)
+
+1 row created.
+
+SQL> /
+Enter value for 1: 108
+Enter value for 2: 3
+Enter value for 3: double
+Enter value for 4: 550
+old   1: insert into room values(&1,&2,'&3',&4)
+new   1: insert into room values(108,3,'double',550)
+
+1 row created.
+
+SQL> /
+Enter value for 1: 108
+Enter value for 2: 2
+Enter value for 3: single
+Enter value for 4: 650
+old   1: insert into room values(&1,&2,'&3',&4)
+new   1: insert into room values(108,2,'single',650)
+insert into room values(108,2,'single',650)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (UROOJ.SYS_C004327) violated
+
+
+SQL> /
+Enter value for 1: 109
+Enter value for 2: 1
+Enter value for 3: single
+Enter value for 4: 650
+old   1: insert into room values(&1,&2,'&3',&4)
+new   1: insert into room values(109,1,'single',650)
+
+1 row created.
+
+SQL> /
+Enter value for 1: 110
+Enter value for 2: 6
+Enter value for 3: double
+Enter value for 4: 600
+old   1: insert into room values(&1,&2,'&3',&4)
+new   1: insert into room values(110,6,'double',600)
+
+1 row created.
+
+SQL> insert into guest values(&1,'&2','&3');
+Enter value for 1: 1
+Enter value for 2: uzma
+Enter value for 3: chittorgarh
+old   1: insert into guest values(&1,'&2','&3')
+new   1: insert into guest values(1,'uzma','chittorgarh')
+
+1 row created.
+
+SQL> /
+Enter value for 1: 2
+Enter value for 2: faizan
+Enter value for 3: jaipur
+old   1: insert into guest values(&1,'&2','&3')
+new   1: insert into guest values(2,'faizan','jaipur')
+
+1 row created.
+
+SQL> /
+Enter value for 1: shadma
+Enter value for 2: s
+Enter value for 3: d
+old   1: insert into guest values(&1,'&2','&3')
+new   1: insert into guest values(shadma,'s','d')
+insert into guest values(shadma,'s','d')
+                         *
+ERROR at line 1:
+ORA-00984: column not allowed here
+
+
+SQL> /
+Enter value for 1: 3
+Enter value for 2: shadma
+Enter value for 3: chittorgarh
+old   1: insert into guest values(&1,'&2','&3')
+new   1: insert into guest values(3,'shadma','chittorgarh')
+
+1 row created.
+
+SQL> /
+Enter value for 1: 4
+Enter value for 2: nazbi
+Enter value for 3: gaziyabad
+old   1: insert into guest values(&1,'&2','&3')
+new   1: insert into guest values(4,'nazbi','gaziyabad')
+
+1 row created.
+
+SQL> /
+Enter value for 1: 5
+Enter value for 2: purvi
+Enter value for 3: ravatabhata
+old   1: insert into guest values(&1,'&2','&3')
+new   1: insert into guest values(5,'purvi','ravatabhata')
+
+1 row created.
+
+SQL> /
+Enter value for 1: 6
+Enter value for 2: fahiza
+Enter value for 3: kota
+old   1: insert into guest values(&1,'&2','&3')
+new   1: insert into guest values(6,'fahiza','kota')
+
+1 row created.
+
+SQL> insert into booking values(&1,&2,&3,&4,&5);
+Enter value for 1: 1
+Enter value for 2: 1
+Enter value for 3: 21-12-2021
+Enter value for 4: 25-12-2021
+Enter value for 5: 102
+old   1: insert into booking values(&1,&2,&3,&4,&5)
+new   1: insert into booking values(1,1,21-12-2021,25-12-2021,102)
+insert into booking values(1,1,21-12-2021,25-12-2021,102)
+                                    *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected DATE got NUMBER
+
+
+SQL> insert into booking values(1,2,date'2021-02-21',date'2022-02-25',1);
+
+1 row created.
+
+SQL> insert into booking values(&1,&2,&3,&4,&5);
+Enter value for 1: 2
+Enter value for 2: 3
+Enter value for 3: date'2021-02-21'
+Enter value for 4: date'2021-02-23'
+Enter value for 5: 102
+old   1: insert into booking values(&1,&2,&3,&4,&5)
+new   1: insert into booking values(2,3,date'2021-02-21',date'2021-02-23',102)
+
+1 row created.
+
+SQL>
+/
+Enter value for 1: 3
+Enter value for 2: 1
+Enter value for 3: date'2022-04-25'
+Enter value for 4: date'2022-04-28'
+Enter value for 5: 103
+old   1: insert into booking values(&1,&2,&3,&4,&5)
+new   1: insert into booking values(3,1,date'2022-04-25',date'2022-04-28',103)
+
+1 row created.
+
+SQL> select * from hotel;
+
+  HOTEL_NO HOTEL_NAME                     ADDRESS
+---------- ------------------------------ ------------------------------
+         1 meera                          mumbai
+         2 padmavat                       chittorgarh
+         3 green_plaza                    mumbai
+         4 vinayak                        chittorgarh
+         5 seven_eleven                   udaipur
+         6 chokhi_dhani                   jaipur
+         7 taj_hotel                      mumbai
+
+7 rows selected.
+
+SQL> select * from room;
+
+   ROOM_NO   HOTEL_NO TYPE                      PRICE
+---------- ---------- -------------------- ----------
+         1          2 single                      500
+       102          3 double                      700
+       103          4 family                      800
+       104          5 single                      600
+       105          3 double                      850
+       106          4 family                      750
+       107          5 family                      900
+       108          3 double                      550
+       109          1 single                      650
+       110          6 double                      600
+
+10 rows selected.
+
+SQL> select * from guest;
+
+  GUEST_NO GUEST_NAME                     ADDRESS
+---------- ------------------------------ ------------------------------
+         1 uzma                           chittorgarh
+         2 faizan                         jaipur
+         3 shadma                         chittorgarh
+         4 nazbi                          gaziyabad
+         5 purvi                          ravatabhata
+         6 fahiza                         kota
+
+6 rows selected.
+
+SQL> select * from booking;
+
+  HOTEL_NO   GUEST_NO DATE_FROM DATE_TO      ROOM_NO
+---------- ---------- --------- --------- ----------
+         1          2 21-FEB-21 25-FEB-22          1
+         2          3 21-FEB-21 23-FEB-21        102
+         3          1 25-APR-22 28-APR-22        103
+
+SQL> select address from where address=mumbai;
+select address from where address=mumbai
+                    *
+ERROR at line 1:
+ORA-00903: invalid table name
+
+
+SQL> select address from hotel;
+
+ADDRESS
+------------------------------
+mumbai
+chittorgarh
+mumbai
+chittorgarh
+udaipur
+jaipur
+mumbai
+
+7 rows selected
+select * from hotel where address like 'mumbai%';
+
+  HOTEL_NO HOTEL_NAME                     ADDRESS
+---------- ------------------------------ ------------------------------
+         1 meera                          mumbai
+         3 green_plaza                    mumbai
+         7 taj_hotel                      mumbai
+
+
+ans B)select guest_name,address from guest where address='chittor' order by guest_name asc;
+
+GUEST_NAME                     ADDRESS
+------------------------------ ------------------------------
+uzma                           chittor
+
+
+ans A) select Hotel_name from hotel where address='mumbai';
+
+HOTEL_NAME
+------------------------------
+meera
+padmavat
+
+
+ans C) select type,price from room where (type='double' or type='family') and (price<800) order by price asc;
+
+TYPE                      PRICE
+-------------------- ----------
+double                      450
+double                      500
+family                      500

@@ -1,0 +1,38 @@
+ create table hotel
+  2  (
+  3  hotel_no number(10) primary key,
+  4  hotel_name varchar(30),
+  5  address varchar(30)
+  6  );
+
+Table created.
+
+SQL>  create table Room
+  2  (
+  3  room_no number(10) primary key,
+  4  hotel_no number(10) references hotel(hotel_no),
+  5  type varchar(20),
+  6  price number(10)
+  7  );
+
+Table created.
+
+SQL>  create table guest
+  2  (
+  3  guest_no number(10) primary key,
+  4  guest_name varchar(30),
+  5  address varchar(30)
+  6  );
+
+Table created.
+
+SQL>  create table booking
+  2  (
+  3  hotel_no number(10) references hotel(hotel_no),
+  4  guest_no number(10) references guest(guest_no),
+  5  date_from date,
+  6  date_to date,
+  7  room_no number(10) references room(room_no)
+  8  );
+
+Table created.

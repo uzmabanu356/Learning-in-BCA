@@ -1,0 +1,87 @@
+SQL> insert into student values(&1,'&2',&3,'&4',&5);
+Enter value for 1: 5
+Enter value for 2: iqra
+Enter value for 3: 75
+Enter value for 4: TMU
+Enter value for 5: 6
+old   1: insert into student values(&1,'&2',&3,'&4',&5)
+new   1: insert into student values(5,'iqra',75,'TMU',6)
+
+1 row created.
+
+SQL> /
+Enter value for 1: 6
+Enter value for 2: sidra  
+Enter value for 3: 65
+Enter value for 4: rnt
+Enter value for 5: 5
+old   1: insert into student values(&1,'&2',&3,'&4',&5)
+new   1: insert into student values(6,'sidra',65,'rnt',5)
+
+1 row created.
+
+SQL> /
+Enter value for 1: 7
+Enter value for 2: aamir
+Enter value for 3: 72
+Enter value for 4: vision
+Enter value for 5: 8
+old   1: insert into student values(&1,'&2',&3,'&4',&5)
+new   1: insert into student values(7,'aamir',72,'vision',8)
+
+1 row created.
+
+SQL> /
+Enter value for 1: 8
+Enter value for 2: purvi
+Enter value for 3: 82
+Enter value for 4: mewar
+Enter value for 5: 7
+old   1: insert into student values(&1,'&2',&3,'&4',&5)
+new   1: insert into student values(8,'purvi',82,'mewar',7)
+
+1 row created.
+
+
+SQL> select* from student;
+
+   ROLL_NO NAME                    PERCENT COLLEGE_NAME
+---------- -------------------- ---------- ------------------------------
+COLLEGE_CODE
+------------
+         1 uzma                         85 college A
+           1
+
+         2 faizan                       80 college 5
+           2
+
+         3 shadma                       70 college C
+           3
+
+
+   ROLL_NO NAME                    PERCENT COLLEGE_NAME
+---------- -------------------- ---------- ------------------------------
+COLLEGE_CODE
+------------
+         4 nazbi                        75 college D
+           4
+
+         5 iqra                         75 TMU
+           6
+
+         6 sidra                        65 rnt
+           5
+
+
+   ROLL_NO NAME                    PERCENT COLLEGE_NAME
+---------- -------------------- ---------- ------------------------------
+COLLEGE_CODE
+------------
+         7 aamir                        72 vision
+           8
+
+         8 purvi                        82 mewar
+           7
+
+
+8 rows selected.
