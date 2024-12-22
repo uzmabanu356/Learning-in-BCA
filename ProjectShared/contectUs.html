@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url("https://htmlcolorcodes.com/assets/images/colors/pastel-purple-color-solid-background-1920x1080.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container form {
+            width: 670px;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(137, 103, 144, 0.8);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .container form h1 {
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .container form input,
+        .container form textarea {
+            width: 100%;
+            max-width: 600px;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-bottom: 2px solid #fff;
+            background: transparent;
+            color: #fff;
+            outline: none;
+        }
+
+        .container form input::placeholder,
+        .container form textarea::placeholder {
+            color: #fff;
+        }
+
+        .container form textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        .container form #button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #fff;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 18px;
+            color: #896790;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .container form #button:hover {
+            background: #896790;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <h1>Contact Us</h1>
+            <input type="text" id="firstName" placeholder="First Name" required>
+            <input type="text" id="lastName" placeholder="Last Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="mobile" placeholder="Mobile" required>
+            <textarea placeholder="Type your message here..." required></textarea>
+            <input type="submit" value="Send" id="button">
+        </form>
+    </div>
+</body>
+
+</html>

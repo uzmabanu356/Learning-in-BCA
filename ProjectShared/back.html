@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS Blur Background</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .background {
+            position:fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            /* background-image: url("../media/WhatsApp%20Image%202024-12-12%20at%203.44.24%20PM.jpeg"); */
+            background-image: url("../media/home1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1;
+            filter: blur(2px col);
+        }
+
+        .content {
+            color: #fff;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 0 20px;
+        }
+
+        .content h2 {
+            font-size: 60px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .content h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .content p {
+            font-size: 20px;
+            color: rgb(255, 192, 218);
+        }
+    </style>
+</head>
+
+<body>
+     <header>
+        <button><a href="../html/login.html">Login</a></button>
+     </header>
+    <div class="background"></div>
+    <div class="content">
+        <h2>MAKE YOUR</h2>
+        <h3>EVENT AASAN</h3> <br>
+        <p>Every Event Should Be Perfect</p>
+    </div>
+    
+</body>
+
+</html>
