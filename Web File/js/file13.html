@@ -1,0 +1,39 @@
+<!-- ==============================Date Object UTC set methed================================ -->
+
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>JavaScript UTC Set Methods Example</h1>
+    <script>
+        // Create a new Date object
+        let date = new Date();
+
+        // Set methods to modify the date and time in UTC
+        date.setUTCFullYear(2035); // Set the year to 2035 (UTC)
+        console.log("Set UTC Year: " + date);
+        
+
+        date.setUTCMonth(5); // Set the month to June (5 = June, UTC)
+        console.log("Set UTC Month: " + date);
+
+        date.setUTCDate(15); // Set the day of the month to 15 (UTC)
+        console.log("Set UTC Date: " + date);
+
+        date.setUTCHours(10); // Set the hours to 10 AM (UTC)
+        console.log("Set UTC Hours: " + date);
+
+        date.setUTCMinutes(30); // Set the minutes to 30 (UTC)
+        console.log("Set UTC Minutes: " + date);
+
+        date.setUTCSeconds(45); // Set the seconds to 45 (UTC)
+        console.log("Set UTC Seconds: " + date);
+
+        date.setUTCMilliseconds(500); // Set the milliseconds to 500 (UTC)
+        console.log("Set UTC Milliseconds: " + date);
+
+        // Set timestamp in milliseconds since Jan 1, 1970 (UTC)
+        date.setTime(1736536245500); // Example timestamp
+        console.log("Set Timestamp (UTC): " + date);
+    </script>
+</body>
+</html>

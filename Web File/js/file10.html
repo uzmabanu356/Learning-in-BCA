@@ -1,0 +1,23 @@
+<!-- ==============================Object Date=================================== -->
+
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>JavaScript Date Get Methods Example</h1>
+    <script>
+        // Current date object
+        let now = new Date();
+
+        // Using get methods to fetch date and time components
+        console.log("Current Year: " + now.getFullYear()); // Year
+        console.log("Current Month: " + (now.getMonth() + 1)); // Month (Add 1 since it starts from 0)
+        console.log("Current Date: " + now.getDate()); // Day of the month
+        console.log("Current Day of the Week: " + now.getDay()); // Day of the week (0=Sunday, 6=Saturday)
+        console.log("Current Hours: " + now.getHours()); // Hours
+        console.log("Current Minutes: " + now.getMinutes()); // Minutes
+        console.log("Current Seconds: " + now.getSeconds()); // Seconds
+        console.log("Current Milliseconds: " + now.getMilliseconds()); // Milliseconds
+        console.log("Timestamp (Milliseconds since Jan 1, 1970): " + now.getTime()); // Timestamp
+    </script>
+</body>
+</html>
