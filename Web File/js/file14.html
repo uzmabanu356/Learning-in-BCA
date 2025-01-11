@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>JavaScript Number Object Constants Example</h1>
+    <script>
+        // Number Object Constants Examples
+
+        // 1. Number.MIN_VALUE
+        console.log("Number.MIN_VALUE: ", Number.MIN_VALUE);
+        console.log("Is Number.MIN_VALUE greater than 0? ", Number.MIN_VALUE > 0);
+
+        // 2. Number.MAX_VALUE
+        console.log("Number.MAX_VALUE: ", Number.MAX_VALUE);
+        console.log("Is Number.MAX_VALUE less than Infinity? ", Number.MAX_VALUE < Infinity);
+
+        // 3. Number.POSITIVE_INFINITY
+        console.log("Number.POSITIVE_INFINITY: ", Number.POSITIVE_INFINITY);
+        console.log("Is Number.POSITIVE_INFINITY finite? ", isFinite(Number.POSITIVE_INFINITY));
+
+        // 4. Number.NEGATIVE_INFINITY
+        console.log("Number.NEGATIVE_INFINITY: ", Number.NEGATIVE_INFINITY);
+        console.log("Is Number.NEGATIVE_INFINITY less than -1e308? ", Number.NEGATIVE_INFINITY < -1e308);
+
+        // 5. Number.NaN (Not-a-Number)
+        console.log("Number.NaN: ", Number.NaN);
+        console.log("Is Number.NaN equal to itself? ", Number.NaN === Number.NaN);
+        console.log("Use isNaN(Number.NaN): ", isNaN(Number.NaN));
+
+    </script>
+</body>
+</html>

@@ -1,12 +1,15 @@
-<!-- ==============================Date Object set methed================================ -->
+<!-- ==============================Date Object set method================================ -->
 
 <!DOCTYPE html>
 <html>
 <body>
-    <h1>JavaScript Set Methods Example</h1>
-    <script>
+    <h1>JavaScript Set Methods Example </h1>
+    <script> 
         // Create a new Date object
         let date = new Date();
+
+        date.setDate(25); // Set the day of the month to 25
+        console.log("Set Date: " + date);
 
         // Set methods to modify the date and time
         date.setFullYear(2030); // Set the year to 2030
@@ -14,9 +17,6 @@
 
         date.setMonth(11); // Set the month to December (11 = December)
         console.log("Set Month: " + date);
-
-        date.setDate(25); // Set the day of the month to 25
-        console.log("Set Date: " + date);
 
         date.setHours(15); // Set the hours to 3 PM
         console.log("Set Hours: " + date);
@@ -30,9 +30,11 @@
         date.setMilliseconds(500); // Set the milliseconds to 500
         console.log("Set Milliseconds: " + date);
 
-        // Set timestamp (milliseconds since Jan 1, 1970)
-        date.setTime(1736536245500); // Example timestamp
-        console.log("Set Timestamp: " + date);
+        // Using toString() to display the string representation of the date
+        console.log("Date as String (toString()): " + date.toString());
+
+        // Using valueOf() to display the numeric value (timestamp) of the date
+        console.log("Date as Timestamp (valueOf()): " + date.valueOf());
     </script>
 </body>
 </html>

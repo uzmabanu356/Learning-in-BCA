@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Number Methods Example</title>
+</head>
+
+<body>
+    <h1>JavaScript Number Methods </h1>
+    <script>
+        // Declare a number
+        let num = 1234.56789;
+        console.log("Original Number: ", num);
+
+        // 1. isFinite() - Check if a value is finite
+        console.log("isFinite(123): ", Number.isFinite(123)); // true
+        console.log("isFinite(Infinity): ", Number.isFinite(Infinity)); //false
+
+        // 2. isInteger() - Check if a value is an integer
+        console.log("isInteger(123): ", Number.isInteger(123)); // true
+        console.log("isInteger(123.45): ", Number.isInteger(123.45)); // false
+
+        //3.parseFloat() - Parse floating-point number from a string
+        console.log("parseFloat('123.45'): ", Number.parseFloat("123.45"));
+
+        // 4. parseInt() - Parse integer from a string
+        console.log("parseInt('123.45'): ", Number.parseInt("123.45"));
+        console.log("parseInt('1001', 2): ", Number.parseInt("1001", 2)); // Binary to decimal
+
+        // 5. toExponential() - Convert to exponential form
+        console.log("toExponential(2): ", num.toExponential(2)); // 2 decimal places in exponential
+
+        // 6. toFixed() - Round to fixed decimal places
+        console.log("toFixed(2): ", num.toFixed(2)); // 2 decimal places
+        console.log("toFixed(0): ", num.toFixed(0)); // 0 decimal places
+
+        // 7. toPrecision() - Format to a specific number of total digits
+        console.log("toPrecision(5): ", num.toPrecision(5)); // Total 5 digits
+        console.log("toPrecision(2): ", num.toPrecision(2)); // Total 2 digits
+
+        // 8. toString() - Convert number to string
+        console.log("toString(): ", num.toString());
+        console.log("Binary Representation: ", num.toString(2)); // Base 2
+        console.log("Hexadecimal Representation: ", num.toString(16)); // Base 16
+
+    </script>
+</body>
+
+</html>

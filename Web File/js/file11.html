@@ -3,21 +3,22 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <h1>JavaScript UTC Methods Example</h1>
+    <h1>JavaScript UTC get   Methods Example</h1>
     <script>
         // Current Date Object
         let now = new Date();
 
         // Using UTC methods
-        console.log("UTC Full Year: " + now.getUTCFullYear()); // Full year in UTC
-        console.log("UTC Month: " + (now.getUTCMonth() + 1)); // Month (0-11, add 1 for correct month)
-        console.log("UTC Date: " + now.getUTCDate()); // Day of the month
-        console.log("UTC Day of the Week: " + now.getUTCDay()); // Day of the week (0 = Sunday, 6 = Saturday)
-        console.log("UTC Hours: " + now.getUTCHours()); // Hours in UTC
-        console.log("UTC Minutes: " + now.getUTCMinutes()); // Minutes in UTC
-        console.log("UTC Seconds: " + now.getUTCSeconds()); // Seconds in UTC
-        console.log("UTC Milliseconds: " + now.getUTCMilliseconds()); // Milliseconds in UTC
-        console.log("UTC Timestamp: " + now.getTime()); // Timestamp (same for both UTC and local)
+        console.log("UTC Date: " + now.getUTCDate()); 
+        console.log("UTC Month: " + (now.getUTCMonth() + 1)); 
+        console.log("UTC Day of the Week: " + now.getUTCDay()); 
+        console.log("UTC Hours: " + now.getUTCHours()); 
+        console.log("UTC Minutes: " + now.getUTCMinutes()); 
+        console.log("UTC Seconds: " + now.getUTCSeconds());
+        console.log("UTC Full Year: " + now.getUTCFullYear());
+
+        // console.log("UTC Milliseconds: " + now.getUTCMilliseconds());
+        // console.log("UTC Timestamp: " + now.getTime());
     </script>
 </body>
 </html>
