@@ -1,0 +1,414 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../style/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/headerFooter.css">
+    <link rel="stylesheet" href="../style/all.css">
+    <title>Services</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+       .service{
+            box-sizing: border-box;
+            min-height: 110vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #EFEFEF;
+            
+        }
+        .slide-container{
+            max-width: 1120px;
+            width:100% ;
+            
+            padding: 40px 0;
+        }
+        .slide-content{
+            overflow: hidden;
+            margin: 0 40px;
+            background-color: #EFEFEF;
+            border-radius:25px ;
+        }
+        .card{
+            
+            border-radius: 25px;
+            background-color: white;
+        }
+        .img-content,.card-content{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+            padding: 10px 14px ;
+        }
+        .img-content{
+            row-gap: 5px;
+            position: relative;
+            padding: 25px 0;
+        }
+        .overlay{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            border-radius: 25px 25px 0 25px;
+        }
+        .overlay::before,
+        .overlay::after
+        {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: -40px;
+            height: 40px;
+            width: 40px;
+            background-color: black;
+        }
+        .overlay::after{
+            border-radius: 0 25px 0 0;
+            background-color: white;
+        }
+     .card-img{
+        position: relative;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        background-color: #fff;
+        padding: 3px;
+     } 
+     .card-img .c-img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid black;
+     }  
+     .heading{
+        font-size: 18px;
+        font-weight: 500;
+        color: #333;
+     }
+     .para{
+        font-size: 14px;
+        color: #707070;
+        text-align: center;
+     }
+     .button{
+        border: none;
+        font-size: 16px;
+        color: #fff;
+        padding: 8px 16px;
+        background-color: black;
+        border-radius: 6px;
+        margin: 14px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+     }
+     .button a{
+        text-decoration: none;
+        color: white;
+     }
+     .button:hover{
+        background-color: red;
+        border: 2px solid black;
+        color: black;
+     }
+     .swiper-button-next{
+        color: black;
+     }
+     .swiper-button-prev{
+        color: black;
+     }
+     .swiper-pagination{
+       color: black;
+     }
+       
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container-fluid">
+
+            <div class="row headerContainer d-flex justify-content-center align-items-center">
+                <div class="col-4 ">
+                    <h1 style="margin-left: 100px;"><i class="fa-solid fa-location-dot"></i> EventAasaan</h1>
+                </div>
+
+                <div class="col-6 d-flex justify-content-center align-items-center">
+                    <ul class="d-flex">
+                        <li><a href="../index.html" id="Home">Home</a></li>
+                        <li><a href="../html/aboutUs.html">About</a></li>
+                        <li><a href="../html/venue.html">Venue</a></li>
+                        <li><a href="../html/event.html">Event</a></li>
+                        <li><a href="../html/gallery.html">Gallery</a></li>
+                        <li><a href="../html/schedule.html">Other-Activity</a></li>
+                        <li><a href="../html/conactUs.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-2">
+                    <button style="margin-bottom: 10px;"><a href="../html/SignUp.html">SignUp</a></button>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    </section>
+
+    <!-- ============== Services ============= 
+     ======================================-->
+     <section>
+        <div class="container-fluid">
+            <div class="row mt-5">
+                <div class="col d-flex flex-column justify-content-center align-items-center">
+                    <h1 style="color: #0e1b4d;">Birthday Party</h1>
+                </div>
+            </div>
+            <div class="row mt-2  ">
+                <div class="col"
+                    style="text-align: justify;font-style: normal; font-size:20px; color: rgb(150, 148, 148);">
+                    <p>Your birthday is one of the most special days of the year, and we’re here to make sure it’s
+                        nothing short of extraordinary. Our comprehensive birthday party services are designed to create
+                        lasting memories for you and your loved ones. From the moment your guests arrive until the final
+                        goodbyes, we ensure every detail is taken care of.</p>
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col-4 ms-5">
+                    <img src="../img/Event/eb1.jpeg" alt="" style="width: 500px; border-radius: 30px;">
+                </div>
+                <div class="col-4 offset-2"> 
+                    <img src="../img/Event/eb2.jpeg" alt=""  style="height: 100%; width: 500px; border-radius: 30px;">
+                </div>
+            </div>
+        </div>
+        </section>
+        <section class="service">
+            <div class="slide-container swiper">
+                <div class="row">
+                    <div class="col d-flex flex-column justify-content-center align-items-center mt-5">
+                <h1 style="color: #0e1b4d;">Our Services</h1>
+                <p style="color: #9195a2; font-size: 20px;">Check our service </p>
+                    </div>
+                </div>
+                <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper">
+                        <div class="card swiper-slide">
+                            <div class="img-content">
+                                <span class="overlay">
+    
+                                </span>
+                                <div class="card-img">
+                                    <img src="../img/services/s1.jpg" class="c-img">
+                                </div>
+                        </div>
+                            <div class="card-content">
+                                <h2 class="heading">Theam-Based Party </h2>
+                                <p class="para">There are so many options one can choose to celebrate a birthday or a special occasion.</p>
+                                <button class="button"><a href="../html/theme.html">Learn More</a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="img-content">
+                                <span class="overlay">
+    
+                                </span>
+                                <div class="card-img">
+                                    <img src="../img/services/s2.jpg" class="c-img">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="heading">Karaoke Extravaganza
+                                </h2>
+                                <p class="para">Gather your friends and family for a night of musical fun with a karaoke party! </p>
+                                <button class="button"><a href="../html/kareoke.html">Learn More</a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="img-content">
+                                <span class="overlay">
+    
+                                </span>
+                                <div class="card-img">
+                                    <img src="../img/services/s3.jpg" class="c-img">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="heading">Music & Entertainment </h2>
+                                <p class="para">From live bands and DJs to mesmerising performers, we have everything you need .</p>
+                                <button class="button"><a href="../html/music.html">Learn More</a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="img-content">
+                                <span class="overlay">
+    
+                                </span>
+                                <div class="card-img">
+                                    <img src="../img/services/s4.jpg" class="c-img">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="heading">Food </h2>
+                                <p class="para">We always provide a multi - cuisine catering menu. .</p>
+                                <button class="button"><a href="../html/food.html">Learn More</a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="img-content">
+                                <span class="overlay">
+    
+                                </span>
+                                <div class="card-img">
+                                    <img src="../img/services/s5.jpg" class="c-img">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="heading">Treasure Hunt
+                                </h2>
+                                <p class="para">Embark on an exciting treasure hunt adventure for a birthday celebration filled with mystery.</p>
+                                <button class="button"><a href="../html/treasure.html">Learn More</a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="img-content">
+                                <span class="overlay">
+    
+                                </span>
+                                <div class="card-img">
+                                    <img src="../img/services/s6.webp" class="c-img">
+                            </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="heading">Stage Decoration </h2>
+                                <p class="para">Makes every event stage a unforgettable memories .</p>
+                                <button class="button"><a href="../html/stage copy.html">Learn More</a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="img-content">
+                                <span class="overlay">
+    
+                                </span>
+                                <div class="card-img">
+                                    <img src="../img/services/p/p1.webp" class="c-img">
+                            </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="heading">Photography & Videography </h2>
+                                <p class="para">Makes every event memories throaugh the best Photography team.</p>
+                                <button class="button"><a href="../html/p.html">Learn More</a>
+                                </button>
+                            </div>
+                        </div>
+                       
+    
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            <script>
+                  
+        var swiper = new Swiper(".slide-content", {
+          slidesPerView: 3,
+          spaceBetween: 25,
+          loop: true,
+          centerSlide:'true',
+          fade:'true',
+          grabCursor:'true',
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets:true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+        
+        </section>
+
+
+    <!-- ============== footer============= 
+     ======================================-->
+
+    <section class=" footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-widget">
+                        <h1><i class="fa-solid fa-location-dot"></i> EventAasaan</h1>
+                        <p>
+                            Welcome to Event Hive! We make organizing and joining social events easy and stress-free.
+                            From community gatherings to seminars, our platform handles everything smoothly. With simple
+                            tools and secure processes, we save your time and effort. Focus on enjoying your event while
+                            we manage the details for you!
+                        </p>
+                    </div>
+                </div>
+                <div class=" links col-md-4">
+                    <div class="footer-widget">
+                        <h4 id="useful">USEFUL LINKS</h4>
+                        <ul>
+                            <br>
+                            <li id="home"><a href="../index.html">Home</a></li> <br>
+                            <li><a href="../html/aboutUs.html">About</a></li> <br>
+                            <li><a href="../html/services.html">Services</a></li> <br>
+                            <li><a href="../html/privacyPolicy.html">Privacy Policy</a></li> <br>
+                        </ul>
+                    </div>
+                </div>
+                <div class=" contact col-md-4">
+                    <div class="footer-widget">
+                        <h4>CONTACT US</h4>
+                        <Address>
+                            Sector5, Gandhi Nagar, Chittorgarh, Rajasthan 312001
+                            <br>
+                            Phone: 089883 59770
+                            <br>
+                            Email: mewar@gmail.com
+                            <br>
+                            <div class="social-links">
+                                <i class="fa-brands fa-square-x-twitter"></i>
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-square-instagram"></i>
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                        </Address>
+                    </div>
+                </div>
+            </div> <br> <br>
+            <div class="row">
+                <div class=" bottom-footer ">
+                    <p> © Copyright TheEvent. All Rights Reserved <br>
+                        <!-- Designed by <span style="color: red;">---</span> -->
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>

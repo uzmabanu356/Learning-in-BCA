@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../style/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/headerFooter.css">
+    <link rel="stylesheet" href="../style/all.css">
+
+    <title>Gallery</title>
+    <style>
+        .Gallery-container .container-fluid {
+            box-sizing: border-box;
+            position: relative;
+            min-height: 100vh;
+            margin-bottom: 10%;
+        }
+
+        .Gallery-container .container-fluid .img-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container-fluid .img-container .image {
+            height: 250px;
+            width: 350px;
+            border: 10px solid transparent;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .container-fluid .img-container .image img {
+            height: 100%;
+            width: 100%;
+
+            transition: 0.2s linear;
+        }
+
+        .container-fluid .img-container .image:hover img {
+            transform: scale(1.1);
+
+        }
+
+        .container-fluid .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.9);
+            height: 100%;
+            width: 100%;
+            z-index: 100;
+            display: none;
+        }
+
+        .container-fluid .popup span {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            font-size: 60px;
+            font-weight: bolder;
+            color: #fff;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        .container-fluid .popup img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 5px solid #fff;
+            border-radius: 5px;
+            width: 750px;
+            object-fit: cover;
+        }
+
+        @media(max-width:768px) {
+            .container-fluid .popup img {
+                width: 95%;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <section>
+        <div class="container-fluid">
+
+            <div class="row headerContainer d-flex justify-content-center align-items-center">
+                <div class="col-4 ">
+                    <h1 style="margin-left: 100px;"><i class="fa-solid fa-location-dot"></i> EventAasaan</h1>
+                </div>
+
+                <div class="col-6 d-flex justify-content-center align-items-center">
+                    <ul class="d-flex">
+                        <li><a href="../index.html" id="Home">Home</a></li>
+                        <li><a href="../html/aboutUs.html">About</a></li>
+                        <li><a href="../html/venue.html">Venue</a></li>
+                        <li><a href="../html/event.html">Event</a></li>
+                        <li><a href="../html/gallery.html">Gallery</a></li>
+                        <li><a href="../html/schedule.html">Other-Activity</a></li>
+                        <li><a href="../html/conactUs.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-2">
+                    <button style="margin-bottom: 10px;"><a href="../html/SignUp.html">SignUp</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== Gallery ============= 
+     ======================================-->
+
+    <section class="Gallery-container">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col d-flex flex-column justify-content-center align-items-center mt-5">
+                    <h1 style="color: #0e1b4d;">Gallery</h1>
+                    <p style="color: #9195a2; font-size: 20px;">Check our gallery from the recent events</p>
+                </div>
+            </div>
+            <div class="img-container">
+
+                <div class="image">
+                    <img src="../img/gallery/g1.jpg">
+                </div>
+                <div class="image">
+                    <img src="../img/gallery/g2.jpg">
+                </div>
+                <div class="image">
+                    <img src="../img/gallery/g3.jpg">
+                </div>
+                <div class="image">
+                    <img src="../img/gallery/g4.jpg">
+                </div>
+                <div class="image">
+                    <img src="../img/gallery/g5.jpg">
+                </div>
+                <div class="image">
+                    <img src="../img/gallery/g6.jpg">
+                </div>
+                <div class="image">
+                    <img src="../img/gallery/g7.jpg">
+                </div>
+                <div class="image">
+                    <img src="../img/gallery/g8.jpg">
+                </div>
+                <div class="image">
+                    <img src="../img/gallery/g9.jpg">
+                </div>
+                <div class="image">
+                    <img src="../img/gallery/g10.jpg">
+                </div>
+                <div class="image">
+                    <img src="../img/gallery/g11.jpg">
+                </div>
+                <div class="image">
+                    <img src="../img/gallery/g12.jpg">
+                </div>
+                <div class="image">
+                    <img src="../img/gallery/g13.jpg">
+                </div>
+                <div class="image">
+                    <img src="../img/gallery/g14.jpg">
+                </div>
+                <div class="image">
+                    <img src="../img/gallery/g15.jpg">
+                </div>
+                <div class="image">
+                    <img src="../img/gallery/g16.jpg">
+                </div>
+                <div class="image">
+                    <img src="../img/gallery/g17.jpg">
+                </div>
+                <div class="image">
+                    <img src="../img/gallery/g18.jpg">
+                </div>
+                <div class="image">
+                    <img src="../img/gallery/g19.jpg">
+                </div>
+                <div class="image">
+                    <img src="../img/gallery/g20.jpg">
+                </div>
+                <div class="image">
+                    <img src="../img/gallery/g21.jpg">
+                </div>
+            </div>
+            <div class="popup">
+                <span>&times;</span>
+                <img src="../EMS/img/spon-1.png">
+            </div>
+        </div>
+        <script>
+            document.querySelectorAll('.img-container img').forEach(image => {
+                image.onclick = () => {
+                    document.querySelector('.popup').style.display = 'block';
+                    document.querySelector('.popup img').src = image.getAttribute('src');
+                }
+            });
+            document.querySelector('.popup span').onclick = () => {
+                document.querySelector('.popup').style.display = 'none';
+            }
+        </script>
+
+    </section>
+
+
+
+
+    <!-- ============== footer============= 
+     ======================================-->
+
+    <section class=" footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-widget">
+                        <h1><i class="fa-solid fa-location-dot"></i> EventAasaan</h1>
+                        <p>
+                            Welcome to Event Hive! We make organizing and joining social events easy and stress-free.
+                            From community gatherings to seminars, our platform handles everything smoothly. With simple
+                            tools and secure processes, we save your time and effort. Focus on enjoying your event while
+                            we manage the details for you!
+                        </p>
+                    </div>
+                </div>
+                <div class=" links col-md-4">
+                    <div class="footer-widget">
+                        <h4 id="useful">USEFUL LINKS</h4>
+                        <ul>
+                            <br>
+                            <li id="home"><a href="../index.html">Home</a></li> <br>
+                            <li><a href="../html/aboutUs.html">About</a></li> <br>
+                            <li><a href="../html/services.html">Services</a></li> <br>
+                            <li><a href="../html/privacyPolicy.html">Privacy Policy</a></li> <br>
+                        </ul>
+                    </div>
+                </div>
+                <div class=" contact col-md-4">
+                    <div class="footer-widget">
+                        <h4>CONTACT US</h4>
+                        <Address>
+                            Sector5, Gandhi Nagar, Chittorgarh, Rajasthan 312001
+                            <br>
+                            Phone: 089883 59770
+                            <br>
+                            Email: mewar@gmail.com
+                            <br>
+                            <div class="social-links">
+                                <i class="fa-brands fa-square-x-twitter"></i>
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-square-instagram"></i>
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                        </Address>
+                    </div>
+                </div>
+            </div> <br> <br>
+            <div class="row">
+                <div class=" bottom-footer ">
+                    <p> © Copyright TheEvent. All Rights Reserved <br>
+                        <!-- Designed by <span style="color: red;">---</span> -->
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="./js/bootstrap.min.js"></script>
+
+
+</body>
+
+
+</html>

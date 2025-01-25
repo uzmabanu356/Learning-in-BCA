@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../style/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/headerFooter.css">
+    <link rel="stylesheet" href="../style/all.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+            /* text-align: justify; */
+        }
+
+        .about-us {
+            padding: 80px 0px;
+        }
+
+        .container {
+            text-align: justify;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .flex {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: 0 20px;
+        }
+
+        .about-us h2 {
+            font-size: 55px;
+            margin-bottom: 20px;
+            color: red;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .about-us h3 {
+            font-size: 25px;
+            color: black;
+            margin-bottom: 8px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .about-us p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        .about-us img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            background-color: white;
+        }
+
+        .social-links {
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            color: red;
+            background-color:black;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
+        }
+
+        .social-links a:hover {
+            background-color: white;
+            color: red;
+            transition: all 0.5s;
+        }
+
+        .btn {
+            text-decoration: none;  
+            color: #fff;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 5px;
+            background-color:red;
+            transition: all 0.4s ease;
+        }
+
+        .btn:hover {
+            background-color: black;
+            color: white;
+            transition: all 0.5s;
+        }
+
+        @media screen and(max-width:768px) {
+            .row {
+                flex-direction: column;
+            }
+
+            .flex {
+                max-width: 100%;
+            }
+
+            .about-us h2 {
+                font-size: 31px;
+            }
+
+            .about-us p {
+                font-size: 16px;
+            }
+
+            .social-links a {
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                font-size: 14px;
+                margin-right: 5px;
+            }
+
+            .btn {
+                font-size: 16px;
+                padding: 8px 16px;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container-fluid">
+
+            <div class="row headerContainer d-flex justify-content-center align-items-center">
+                <div class="col-4 ">
+                    <h1 style="margin-left: 100px;"><i class="fa-solid fa-location-dot"></i> EventAasaan</h1>
+                </div>
+
+                <div class="col-6 d-flex justify-content-center align-items-center">
+                    <ul class="d-flex">
+                        <li><a href="../index.html" id="Home">Home</a></li>
+                        <li><a href="../html/aboutUs.html">About</a></li>            
+                        <li><a href="../html/venue.html">Venue</a></li>
+                        <li><a href="../html/event.html">Event</a></li>
+                        <li><a href="../html/gallery.html">Gallery</a></li>
+                        <li><a href="../html/schedule.html">Other-Activity</a></li>
+                        <li><a href="../html/conactUs.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-2">
+                    <button style="margin-bottom: 10px;"><a href="../html/SignUp.html">SignUp</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--===================================== About Us ================================  ================================================================================ -->
+    <section>
+
+        <div class="about-us">
+            <div class="container">
+                <div class="row">
+                    <div class="flex">
+                        <h2 style="color:#0e1b4d;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">ABOUT US</h2>
+                        <h3>Welocome To Our Website</h3>
+                        <p>From concept to execution,Event Aasan delivers flawless experiences tailored to your unique
+                            vision.</br>
+
+                            Welcome to Event Hive, where every event is a masterpiece. Our journey began with a simple
+                            mission: to turn your dreams into unforgettable memories. Based in the heart of Rajasthan,
+                            we've grown into a team of passionate event planners, designers, and coordinators dedicated
+                            to crafting extraordinary experiences.</p>
+                        <div class="social-links">
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                        </div>
+                        <a href="learn more.html">
+                            <a href="../html/learnMore.html" class="btn">Learn More</a>
+                        </a>
+
+                    </div>
+                    <div class="flex">
+                        <img
+                            src="https://img.freepik.com/free-vector/hand-drawn-female-team-illustration_23-2150245842.jpg?ga=GA1.1.331881957.1725800953&semt=ais_hybrid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+    </section>
+    <!-- ============== footer============= 
+     ======================================-->
+
+    <section class=" footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-widget">
+                        <h1><i class="fa-solid fa-location-dot"></i> EventAasaan</h1>
+                        <p>Welcome to Event Hive! We make organizing and joining social events easy and stress-free. From community gatherings to seminars, our platform handles everything smoothly. With simple tools and secure processes, we save your time and effort. Focus on enjoying your event while we manage the details for you!</p>
+                    </div>
+                </div>
+                <div class=" links col-md-4">
+                    <div class="footer-widget">
+                        <h4 id="useful">USEFUL LINKS</h4>
+                        <ul>
+                            <br>
+                            <li id="home"><a href="../index.html">Home</a></li> <br>
+                            <li><a href="../html/aboutUs.html">About</a></li> <br>
+                            <li><a href="../html/services.html">Services</a></li> <br>
+                            <li><a href="../html/privacyPolicy.html">Privacy Policy</a></li> <br>
+                        </ul>
+                    </div>
+                </div>
+                <div class=" contact col-md-4">
+                    <div class="footer-widget">
+                        <h4>CONTACT US</h4>
+                        <Address>
+                            Sector5, Gandhi Nagar, Chittorgarh, Rajasthan 312001
+                            <br>
+                            Phone: 089883 59770
+                            <br>
+                            Email: mewar@gmail.com
+                            <br>
+                            <div class="social-links">
+                                <i class="fa-brands fa-square-x-twitter"></i>
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-square-instagram"></i>
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                        </Address>
+                    </div>
+                </div>
+            </div> <br> <br>
+            <div class="row">
+                <div class=" bottom-footer ">
+                    <p> © Copyright TheEvent. All Rights Reserved <br>
+                        <!-- Designed by <span style="color: red;">---</span> -->
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>

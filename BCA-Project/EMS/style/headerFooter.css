@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.headerContainer{ 
+    background:#101522;
+    position:sticky;
+    top: 0;
+    left: 0;
+    width: 100;
+    color: white; 
+    }
+
+.container-fluid {
+    z-index: 2;
+}
+.col-lg-4 {
+    text-align: center;
+}
+
+.col-lg-4 h1 {
+    color: white;
+    font-family: cursive;
+    margin-top: 5px;
+}
+
+i {
+    color: red;
+}
+
+.col-6 a {
+    list-style: none;
+    text-decoration: none;
+}
+
+
+.col-6 ul li {
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 13px;
+    float: left;
+}
+
+.col-6 ul li a {
+    list-style: none;
+    color: #b0aeae;
+    font-size: 15px;
+}
+
+.col-6 a::before {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: red;
+    transition: all .5s;
+}
+
+.col-6 a:hover::before {
+    width: 100%;
+
+}
+
+.col-2 button {
+    width: 110px;
+    border: 2px solid red;
+    font-size: 15px;
+    font-family: arial;
+    border-radius: 30px;
+    background-color: red;
+    color: white;
+    
+    
+}
+
+.col-2 button a {
+    text-decoration: none;
+    color: white;
+}
+
+.col-2 button:hover {
+    background-color: black;
+    transition: all .5s;
+}
+
+/* ===================================Footer=============================== */
+
+
+.footer{
+    background:#101522;
+    border: rgba(0, 0, 0, 0.1);
+    color: #eee;
+    height: 50%;
+    padding: 10px;
+    
+}
+.bottom-footer{
+    background-color: #101522;
+    color: #eee;
+    margin-left: 0;
+    height: 20%;
+    text-align: center;
+    
+}
+.links h4{
+    text-align: center;
+}
+.links ul{
+      list-style: none;
+}
+
+.links ul a{
+    color: white;
+    text-decoration: none;
+    margin-left: 80px;
+    
+}
+
+.links ul a:hover{
+     color: red;
+     transition: all .5s;
+}
+.contact h4{
+    text-align: center;
+
+}
+.contact address{
+    text-align: center;
+    margin-left: 80px;  
+    padding-top: 10px;
+
+}
+.social-links i{
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+}
+.social-links i:hover{
+    color: red;
+    transition: all .5s;
+}
+
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
