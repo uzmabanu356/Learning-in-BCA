@@ -1,0 +1,39 @@
+<?xml  version="1.0" encoding="ISO-8859-1" ?>
+<html>
+<body>
+   <EMPLOYEES>
+            <EMPLOYEE>
+                   <EID>100</EID>
+                    <ENAME>UZMA</ENAME>
+                    <JOB>MANAGER</JOB>
+                    <SALARY>90000</SALARY>
+                    <SHIFT>MORNING</SHIFT>
+            </EMPLOYEE>
+
+            <EMPLOYEE>
+                   <EID>101</EID>
+                    <ENAME>FAIZAN</ENAME>
+                    <JOB>MANAGER</JOB>
+                    <SALARY>85000</SALARY>
+                    <SHIFT>AFTERNOON</SHIFT>
+            </EMPLOYEE>
+
+            <EMPLOYEE>
+                   <EID>102</EID>
+                    <ENAME>IMAMA</ENAME>
+                    <JOB>MANAGER</JOB>
+                    <SALARY>80000</SALARY>
+                    <SHIFT>EVENING</SHIFT>
+            </EMPLOYEE>
+
+            <EMPLOYEE>
+                   <EID>103</EID>
+                    <ENAME>IQRA</ENAME>
+                    <JOB>MANAGER</JOB>
+                    <SALARY>70000</SALARY>
+                    <SHIFT>NIGHT</SHIFT>
+            </EMPLOYEE>
+
+   </EMPLOYEES>
+</body>
+</html>
